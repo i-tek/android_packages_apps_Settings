@@ -1827,6 +1827,10 @@
     <string name="wifi_notify_open_networks">Open network notification</string>
     <!-- Checkbox summary for option to notify user when open networks are nearby-->
     <string name="wifi_notify_open_networks_summary">Notify when a high\u2011quality public network is available</string>
+    <!-- Checkbox title for option to enable throttling of Wi-Fi scanning -->
+    <string name="wifi_throttle_scanning">Throttle Wi\u2011Fi scanning</string>
+    <!-- Checkbox summary for option to enable throttling of Wi-Fi scanning -->
+    <string name="wifi_throttle_scanning_summary">Limit the frequency at which Apps can initiate Wi\u2011Fi scans to preserve battery charge.</string>
     <!-- Checkbox title for option to enable Wi-Fi when saved networks are nearby -->
     <string name="wifi_wakeup">Turn on Wi\u2011Fi automatically</string>
     <!-- Checkbox summary for option to enable Wi-Fi when high quality saved networks are nearby-->

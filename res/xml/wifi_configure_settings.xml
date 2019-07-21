@@ -39,6 +39,11 @@
         android:summary="@string/wifi_notify_open_networks_summary" />
 
     <SwitchPreference
+        android:key="throttle_wifi_scanning"
+        android:title="@string/wifi_throttle_scanning"
+        android:summary="@string/wifi_throttle_scanning_summary" />
+
+    <SwitchPreference
         android:key="wifi_cellular_data_fallback"
         android:title="@string/wifi_cellular_data_fallback_title"
         android:summary="@string/wifi_cellular_data_fallback_summary" />

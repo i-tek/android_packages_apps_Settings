@@ -45,6 +45,7 @@ public class ConfigureWifiSettings extends DashboardFragment {
 
     private WifiWakeupPreferenceController mWifiWakeupPreferenceController;
     private UseOpenWifiPreferenceController mUseOpenWifiPreferenceController;
+    private ThrottleWifiScanningPreferenceController mThrottleWifiScanningPreferenceController;
 
     @Override
     public int getMetricsCategory() {
@@ -75,12 +76,15 @@ public class ConfigureWifiSettings extends DashboardFragment {
         mWifiWakeupPreferenceController = new WifiWakeupPreferenceController(context, this);
         mUseOpenWifiPreferenceController = new UseOpenWifiPreferenceController(context, this,
                 getLifecycle());
+        mThrottleWifiScanningPreferenceController =
+                new ThrottleWifiScanningPreferenceController(context, this);
         final WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(mWifiWakeupPreferenceController);
         controllers.add(new NotifyOpenNetworksPreferenceController(context, getLifecycle()));
         controllers.add(mUseOpenWifiPreferenceController);
         controllers.add(new WifiInfoPreferenceController(context, getLifecycle(), wifiManager));
+        controllers.add(mThrottleWifiScanningPreferenceController);
         controllers.add(new CellularFallbackPreferenceController(context));
         controllers.add(new WifiP2pPreferenceController(context, getLifecycle(), wifiManager));
         return controllers;
